@@ -1144,18 +1144,69 @@ Graph.prototype.init = function(container)
 	/**
 	 * Function: getCellAt
 	 * 
-	 * Overrides to transform incoming coordinates.
+	 * Needs to modify original method for recursive call.
 	 */
 	Graph.prototype.getCellAt = function(x, y, parent, vertices, edges, ignoreFn)
 	{
 		if (this.useCssTransforms)
 		{
-			x /= this.currentScale - this.currentTranslate.x;
-			y /= this.currentScale - this.currentTranslate.y;
+			x = x / this.currentScale - this.currentTranslate.x;
+			y = y / this.currentScale - this.currentTranslate.y;
 		}
 		
-		return mxGraph.prototype.getCellAt.apply(this, arguments);
+		return this.getScaledCellAt.apply(this, arguments);
 	};
+
+	/**
+	 * Function: getScaledCellAt
+	 * 
+	 * Overridden for recursion.
+	 */
+	Graph.prototype.getScaledCellAt = function(x, y, parent, vertices, edges, ignoreFn)
+	{
+		vertices = (vertices != null) ? vertices : true;
+		edges = (edges != null) ? edges : true;
+
+		if (parent == null)
+		{
+			parent = this.getCurrentRoot();
+			
+			if (parent == null)
+			{
+				parent = this.getModel().getRoot();
+			}
+		}
+
+		if (parent != null)
+		{
+			var childCount = this.model.getChildCount(parent);
+			
+			for (var i = childCount - 1; i >= 0; i--)
+			{
+				var cell = this.model.getChildAt(parent, i);
+				var result = this.getScaledCellAt(x, y, cell, vertices, edges, ignoreFn);
+				
+				if (result != null)
+				{
+					return result;
+				}
+				else if (this.isCellVisible(cell) && (edges && this.model.isEdge(cell) ||
+					vertices && this.model.isVertex(cell)))
+				{
+					var state = this.view.getState(cell);
+
+					if (state != null && (ignoreFn == null || !ignoreFn(state, x, y)) &&
+						this.intersects(state, x, y))
+					{
+						return cell;
+					}
+				}
+			}
+		}
+		
+		return null;
+	};
+
 
 	/**
 	 * Function: repaint
@@ -1260,77 +1311,61 @@ Graph.prototype.init = function(container)
 		
 		if (temp != null)
 		{
-			var g = this.view.getDrawPane().parentNode;
-			var prev = g.getAttribute('transform');
-			g.setAttribute('transformOrigin', '0 0');
-			g.setAttribute('transform', 'scale(' + this.currentScale + ',' + this.currentScale + ')' +
-				'translate(' + this.currentTranslate.x + ',' + this.currentTranslate.y + ')');
-
-			// Applies workarounds only if translate has changed
-			if (prev != g.getAttribute('transform'))
+			var g = temp.parentNode;
+			
+			if (!this.useCssTransforms)
 			{
-				try
+				g.removeAttribute('transformOrigin');
+				g.removeAttribute('transform');
+			}
+			else
+			{
+				var prev = g.getAttribute('transform');
+				g.setAttribute('transformOrigin', '0 0');
+				g.setAttribute('transform', 'scale(' + this.currentScale + ',' + this.currentScale + ')' +
+					'translate(' + this.currentTranslate.x + ',' + this.currentTranslate.y + ')');
+	
+				// Applies workarounds only if translate has changed
+				if (prev != g.getAttribute('transform'))
 				{
-					// Applies transform to labels outside of the SVG DOM
-					// Excluded via isCssTransformsSupported
-//					if (mxClient.NO_FO)
-//					{
-//						var transform = 'scale(' + this.currentScale + ')' + 'translate(' +
-//							this.currentTranslate.x + 'px,' + this.currentTranslate.y + 'px)';
-//							
-//						this.view.states.visit(mxUtils.bind(this, function(cell, state)
-//						{
-//							if (state.text != null && state.text.node != null)
-//							{
-//								// Stores initial CSS transform that is used for the label alignment
-//								if (state.text.originalTransform == null)
-//								{
-//									state.text.originalTransform = state.text.node.style.transform;
-//								}
-//								
-//								state.text.node.style.transform = transform + state.text.originalTransform;
-//							}
-//						}));
-//					}
-					// Workaround for https://bugs.webkit.org/show_bug.cgi?id=93358 in WebKit
-					// Adding an absolute position DIV before the SVG seems to mitigate the problem.
-					if (mxClient.IS_GC)
+					try
 					{
-						if (this.mathEnabled && (this.webKitForceRepaintNode == null ||
-							this.webKitForceRepaintNode.parentNode == null) &&
-							this.container.firstChild.nodeName == 'svg')
+						// Applies transform to labels outside of the SVG DOM
+						// Excluded via isCssTransformsSupported
+	//					if (mxClient.NO_FO)
+	//					{
+	//						var transform = 'scale(' + this.currentScale + ')' + 'translate(' +
+	//							this.currentTranslate.x + 'px,' + this.currentTranslate.y + 'px)';
+	//							
+	//						this.view.states.visit(mxUtils.bind(this, function(cell, state)
+	//						{
+	//							if (state.text != null && state.text.node != null)
+	//							{
+	//								// Stores initial CSS transform that is used for the label alignment
+	//								if (state.text.originalTransform == null)
+	//								{
+	//									state.text.originalTransform = state.text.node.style.transform;
+	//								}
+	//								
+	//								state.text.node.style.transform = transform + state.text.originalTransform;
+	//							}
+	//						}));
+	//					}
+						// Workaround for https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/4320441/
+						if (mxClient.IS_EDGE)
 						{
-							this.webKitForceRepaintNode = document.createElement('div');
-							this.webKitForceRepaintNode.style.cssText = 'position:absolute;';
-							g.ownerSVGElement.parentNode.insertBefore(this.webKitForceRepaintNode, g.ownerSVGElement);
-						}
-						else if (this.webKitForceRepaintNode != null && (!this.mathEnabled ||
-								(this.container.firstChild.nodeName != 'svg' &&
-								this.container.firstChild != this.webKitForceRepaintNode)))
-						{
-							if (this.webKitForceRepaintNode.parentNode != null)
-							{
-								this.webKitForceRepaintNode.parentNode.removeChild(this.webKitForceRepaintNode);
-							}
-							
-							this.webKitForceRepaintNode = null;
+							// Recommended workaround is to do this on all
+							// foreignObjects, but this seems to be faster
+							var val = g.style.display;
+							g.style.display = 'none';
+							g.getBBox();
+							g.style.display = val;
 						}
 					}
-					// Workaround for https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/4320441/
-					else if (mxClient.IS_EDGE)
+					catch (e)
 					{
-						// Recommended workaround is to do this on all
-						// foreignObjects, but this seems to be faster
-						var val = g.style.display;
-						g.style.display = 'none';
-						g.getBBox();
-						g.style.display = val;
+						// ignore
 					}
-				}
-				catch (e)
-				{
-					// ignore
-					console.log('err', e);
 				}
 			}
 		}
@@ -1950,7 +1985,6 @@ Graph.prototype.replacePlaceholders = function(cell, str)
 	if (str != null)
 	{
 		var last = 0;
-		var math = [];
 		
 		while (match = this.placeholderPattern.exec(str))
 		{
@@ -1997,7 +2031,7 @@ Graph.prototype.replacePlaceholders = function(cell, str)
 		}
 		
 		result.push(str.substring(last));
-	}	
+	}
 
 	return result.join('');
 };
@@ -6363,7 +6397,16 @@ if (typeof mxVertexHandler != 'undefined')
 		Graph.prototype.insertRow = function(table, index)
 		{
 			var bd = table.tBodies[0];
-			var cols = (bd.rows.length > 0) ? bd.rows[0].cells.length : 1;
+			var cells = bd.rows[0].cells;
+			var cols = 0;
+			
+			// Counts columns including colspans
+			for (var i = 0; i < cells.length; i++)
+			{
+				var colspan = cells[i].getAttribute('colspan');
+				cols += (colspan != null) ? parseInt(colspan) : 1;
+			}
+			
 			var row = bd.insertRow(index);
 			
 			for (var i = 0; i < cols; i++)
