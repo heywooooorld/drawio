@@ -194,8 +194,9 @@ public class GliffyDiagramConverter
 			mxCell startTerminal = getTerminalCell(obj, true);
 			mxCell endTerminal = getTerminalCell(obj, false);
 
-			drawioDiagram.addCell(obj.getMxObject(), parent, null, startTerminal, endTerminal);
-
+			obj.getMxObject().setTerminal(startTerminal, true);
+			obj.getMxObject().setTerminal(endTerminal, false);
+			
 			setWaypoints(obj, startTerminal, endTerminal);
 		}
 	}
@@ -392,7 +393,7 @@ public class GliffyDiagramConverter
 				double rads = Math.toRadians(object.rotation);
 				double cos = Math.cos(rads);
 				double sin = Math.sin(rads);
-				waypoint = Utils.getRotatedPoint(waypoint, cos, sin, pivot);
+				waypoint = mxUtils.getRotatedPoint(waypoint, cos, sin, pivot);
 			}
 
 			mxPoints.add(waypoint);
@@ -651,7 +652,15 @@ public class GliffyDiagramConverter
 
 				if (style.lastIndexOf("fillColor") == -1)
 				{
-					style.append("fillColor=" + shape.fillColor).append(";");
+					if (shape.isNoFill())
+					{
+						style.append("fillColor=none;");
+
+					}
+					else
+					{
+						style.append("fillColor=" + shape.fillColor).append(";");
+					}
 
 					if (shape.fillColor.equals("none"))
 					{
@@ -659,7 +668,7 @@ public class GliffyDiagramConverter
 					}
 
 				}
-				if (style.lastIndexOf("strokeColor") == -1)
+				if (style.lastIndexOf("strokeColor") == -1 && !shape.isNoFill())
 				{
 					String strokeClr = gliffyObject.isUseFillColor4StrokeColor() ? shape.fillColor : shape.strokeColor;
 					style.append("strokeColor=" + strokeClr).append(";");
@@ -800,9 +809,10 @@ public class GliffyDiagramConverter
 			{
 				GliffySvg svg = graphic.Svg;
 				cell.setVertex(true);
-				style.append("shape=image;aspect=fixed;");
+				style.append("shape=image;imageAspect=0;");
 				Resource res = gliffyDiagram.embeddedResources.get(svg.embeddedResourceId);
-
+				SVGImporterUtils svgUtils = new SVGImporterUtils();
+				res.data = svgUtils.setViewBox(res.data);
 				style.append("image=data:image/svg+xml,").append(res.getBase64EncodedData()).append(";");
 			}
 		}
@@ -878,7 +888,7 @@ public class GliffyDiagramConverter
 				gLane.mxObject = mxLane;
 			}
 		}
-		else if (gliffyObject.isMindmap())
+		else if (gliffyObject.isMindmap() && gliffyObject.children != null && !gliffyObject.children.isEmpty())
 		{
 			GliffyObject rectangle = gliffyObject.children.get(0);
 
@@ -932,6 +942,14 @@ public class GliffyDiagramConverter
 				}
 				else
 				{
+					if (gliffyObject.isGroup())
+					{
+						for (GliffyObject childObject : gliffyObject.children)
+						{
+							rotateGroupedObject(gliffyObject, childObject);
+						}
+
+					}
 					style.append("rotation=" + gliffyObject.rotation + ";");
 				}
 			}
@@ -953,7 +971,16 @@ public class GliffyDiagramConverter
 
 				cell.setValue(textObject.getText());
 				gliffyObject.adjustTextPos(textObject);
-				style.append(textObject == gliffyObject ? txt.getStyle(0, 0) : txt.getStyle(textObject.x, textObject.y));
+				// If gliffyObject is Frame then always stick text on top left corner.
+				if (gliffyObject.containsTextBracket())
+				{
+					fixFrameTextBorder(gliffyObject, style);
+					style.append(txt.getStyle(0, 0).replaceAll("verticalAlign=middle", "verticalAlign=top"));
+				}
+				else
+				{
+					style.append(textObject == gliffyObject ? txt.getStyle(0, 0) : txt.getStyle(textObject.x, textObject.y));
+				}
 			}
 		}
 
@@ -977,5 +1004,42 @@ public class GliffyDiagramConverter
 		gliffyObject.mxObject = cell;
 
 		return cell;
+	}
+
+	/**
+	 * Rotate objects inside Group
+	 * 
+	 * @param group
+	 * @param childObject
+	 */
+	private void rotateGroupedObject(GliffyObject group, GliffyObject childObject)
+	{
+		mxPoint pivot = new mxPoint(group.width / 2 - childObject.width / 2, group.height / 2 - childObject.height / 2);
+		mxPoint temp = new mxPoint(childObject.x, childObject.y);
+		if (group.rotation != 0)
+		{
+			double rads = Math.toRadians(group.rotation);
+			double cos = Math.cos(rads);
+			double sin = Math.sin(rads);
+			temp = mxUtils.getRotatedPoint(temp, cos, sin, pivot);
+			childObject.x = (float) temp.getX();
+			childObject.y = (float) temp.getY();
+			childObject.rotation += group.rotation;
+		}
+	}
+	
+	/**
+	 * Update borders of Text bracket in Frame objects.
+	 * 
+	 * @param gliffyObject the GliffyObject
+	 * @param style the StringBuilder with our style
+	 */
+	private void fixFrameTextBorder(GliffyObject gliffyObject, StringBuilder style)
+	{
+		String wrongValue = "labelX=32"; // hard-coded 32 from gliffyTranslation.properties needs to be replaced
+		String correctValue = "labelX=" + gliffyObject.getTextObject().width * 1.1f; // 10% more to bracket width, looks nicer on UI
+		int start = style.indexOf(wrongValue);
+		int end = start + wrongValue.length();
+		style.replace(start, end, correctValue);
 	}
 }

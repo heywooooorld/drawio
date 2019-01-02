@@ -25,6 +25,36 @@
 	Editor.spinImage = (!mxClient.IS_SVG) ? IMAGE_PATH + '/spin.gif' : 'data:image/gif;base64,R0lGODlhDAAMAPUxAEVriVp7lmCAmmGBm2OCnGmHn3OPpneSqYKbr4OcsIScsI2kto6kt46lt5KnuZmtvpquvpuvv56ywaCzwqK1xKu7yay9yq+/zLHAzbfF0bjG0bzJ1LzK1MDN18jT28nT3M3X3tHa4dTc49Xd5Njf5dng5t3k6d/l6uDm6uru8e7x8/Dz9fT29/b4+Pj5+fj5+vr6+v///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAkKADEAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAADAAMAAAGR8CYcEgsOgYAIax4CCQuQldrCBEsiK8VS2hoFGOrlJDA+cZQwkLnqyoJFZKviSS0ICrE0ec0jDAwIiUeGyBFGhMPFBkhZo1BACH5BAkKAC4ALAAAAAAMAAwAhVB0kFR3k1V4k2CAmmWEnW6Lo3KOpXeSqH2XrIOcsISdsImhtIqhtJCmuJGnuZuwv52wwJ+ywZ+ywqm6yLHBzbLCzrXEz7fF0LnH0rrI0r7L1b/M1sXR2cfT28rV3czW3s/Z4Nfe5Nvi6ODm6uLn6+Ln7OLo7OXq7efs7+zw8u/y9PDy9PX3+Pr7+////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAZDQJdwSCxGDAIAoVFkFBwYSyIwGE4OkCJxIdG6WkJEx8sSKj7elfBB0a5SQg1EQ0SVVMPKhDM6iUIkRR4ZFxsgJl6JQQAh+QQJCgAxACwAAAAADAAMAIVGa4lcfZdjgpxkg51nhp5ui6N3kqh5lKqFnbGHn7KIoLOQp7iRp7mSqLmTqbqarr6br7+fssGitcOitcSuvsuuv8uwwMyzw861xNC5x9K6x9K/zNbDztjE0NnG0drJ1NzQ2eDS2+LT2+LV3ePZ4Oba4ebb4ufc4+jm6+7t8PLt8PPt8fPx8/Xx9PX09vf19/j3+Pn///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGQ8CYcEgsUhQFggFSjCQmnE1jcBhqGBXiIuAQSi7FGEIgfIzCFoCXFCZiPO0hKBMiwl7ET6eUYqlWLkUnISImKC1xbUEAIfkECQoAMgAsAAAAAAwADACFTnKPT3KPVHaTYoKcb4yjcY6leZSpf5mtgZuvh5+yiqG0i6K1jqW3kae5nrHBnrLBn7LCoLPCobTDqbrIqrvIs8LOtMPPtcPPtcTPuMbRucfSvcrUvsvVwMzWxdHaydTcytXdzNbezdff0drh2ODl2+Ln3eTp4Obq4ujs5Ont5uvu6O3w6u7w6u7x7/L09vj5+vr7+vv7////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABkdAmXBILHIcicOCUqxELKKPxKAYgiYd4oMAEWo8RVmjIMScwhmBcJMKXwLCECmMGAhPI1QRwBiaSixCMDFhLSorLi8wYYxCQQAh+QQJCgAxACwAAAAADAAMAIVZepVggJphgZtnhp5vjKN2kah3kqmBmq+KobSLorWNpLaRp7mWq7ybr7+gs8KitcSktsWnuManucexwM2ywc63xtG6yNO9ytS+ytW/zNbDz9jH0tvL1d3N197S2+LU3OPU3ePV3eTX3+Xa4efb4ufd5Onl6u7r7vHs7/Lt8PLw8/Xy9Pby9fb09ff2+Pn3+Pn6+vr///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGSMCYcEgseiwSR+RS7GA4JFGF8RiWNiEiJTERgkjFGAQh/KTCGoJwpApnBkITKrwoCFWnFlEhaAxXLC9CBwAGRS4wQgELYY1CQQAh+QQJCgAzACwAAAAADAAMAIVMcI5SdZFhgZtti6JwjaR4k6mAma6Cm6+KobSLorWLo7WNo7aPpredsMCescGitMOitcSmuMaqu8ixwc2zws63xdC4xtG5x9K9ytXAzdfCztjF0NnF0drK1d3M1t7P2N/P2eDT2+LX3+Xe5Onh5+vi5+vj6Ozk6e3n7O/o7O/q7vHs7/Lt8PPu8fPx8/X3+Pn6+vv7+/v8/Pz///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGRcCZcEgsmkIbTOZTLIlGqZNnchm2SCgiJ6IRqljFmQUiXIVnoITQde4chC9Y+LEQxmTFRkFSNFAqDAMIRQoCAAEEDmeLQQAh+QQJCgAwACwAAAAADAAMAIVXeZRefplff5lhgZtph59yjqV2kaeAmq6FnbGFnrGLorWNpLaQp7mRqLmYrb2essGgs8Klt8apusitvcquv8u2xNC7yNO8ydS8ytTAzdfBzdfM1t7N197Q2eDU3OPX3+XZ4ObZ4ebc4+jf5erg5erg5uvp7fDu8fPv8vTz9fb09vf19/j3+Pn4+fn5+vr6+/v///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGRUCYcEgspkwjEKhUVJ1QsBNp0xm2VixiSOMRvlxFGAcTJook5eEHIhQcwpWIkAFQECkNy9AQWFwyEAkPRQ4FAwQIE2llQQAh+QQJCgAvACwAAAAADAAMAIVNcY5SdZFigptph6BvjKN0kKd8lquAmq+EnbGGn7KHn7ONpLaOpbearr+csMCdscCescGhtMOnuMauvsuzws60w862xdC9ytW/y9a/zNbCztjG0drH0tvK1N3M1t7N19/U3ePb4uff5urj6Ozk6e3l6u7m6u7o7PDq7vDt8PPv8vTw8vTw8/X19vf6+vv///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGQ8CXcEgsvlytVUplJLJIpSEDUESFTELBwSgCCQEV42kjDFiMo4uQsDB2MkLHoEHUTD7DRAHC8VAiZ0QSCgYIDxhNiUEAOw==';
 
 	/**
+	 * 
+	 */
+	Editor.globeImage = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTEuOTkgMkM2LjQ3IDIgMiA2LjQ4IDIgMTJzNC40NyAxMCA5Ljk5IDEwQzE3LjUyIDIyIDIyIDE3LjUyIDIyIDEyUzE3LjUyIDIgMTEuOTkgMnptNi45MyA2aC0yLjk1Yy0uMzItMS4yNS0uNzgtMi40NS0xLjM4LTMuNTYgMS44NC42MyAzLjM3IDEuOTEgNC4zMyAzLjU2ek0xMiA0LjA0Yy44MyAxLjIgMS40OCAyLjUzIDEuOTEgMy45NmgtMy44MmMuNDMtMS40MyAxLjA4LTIuNzYgMS45MS0zLjk2ek00LjI2IDE0QzQuMSAxMy4zNiA0IDEyLjY5IDQgMTJzLjEtMS4zNi4yNi0yaDMuMzhjLS4wOC42Ni0uMTQgMS4zMi0uMTQgMiAwIC42OC4wNiAxLjM0LjE0IDJINC4yNnptLjgyIDJoMi45NWMuMzIgMS4yNS43OCAyLjQ1IDEuMzggMy41Ni0xLjg0LS42My0zLjM3LTEuOS00LjMzLTMuNTZ6bTIuOTUtOEg1LjA4Yy45Ni0xLjY2IDIuNDktMi45MyA0LjMzLTMuNTZDOC44MSA1LjU1IDguMzUgNi43NSA4LjAzIDh6TTEyIDE5Ljk2Yy0uODMtMS4yLTEuNDgtMi41My0xLjkxLTMuOTZoMy44MmMtLjQzIDEuNDMtMS4wOCAyLjc2LTEuOTEgMy45NnpNMTQuMzQgMTRIOS42NmMtLjA5LS42Ni0uMTYtMS4zMi0uMTYtMiAwLS42OC4wNy0xLjM1LjE2LTJoNC42OGMuMDkuNjUuMTYgMS4zMi4xNiAyIDAgLjY4LS4wNyAxLjM0LS4xNiAyem0uMjUgNS41NmMuNi0xLjExIDEuMDYtMi4zMSAxLjM4LTMuNTZoMi45NWMtLjk2IDEuNjUtMi40OSAyLjkzLTQuMzMgMy41NnpNMTYuMzYgMTRjLjA4LS42Ni4xNC0xLjMyLjE0LTIgMC0uNjgtLjA2LTEuMzQtLjE0LTJoMy4zOGMuMTYuNjQuMjYgMS4zMS4yNiAycy0uMSAxLjM2LS4yNiAyaC0zLjM4eiIvPjwvc3ZnPg==';
+
+	/**
+	 * 
+	 */
+	Editor.userImage = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgMTJjMi4yMSAwIDQtMS43OSA0LTRzLTEuNzktNC00LTQtNCAxLjc5LTQgNCAxLjc5IDQgNCA0em0wIDJjLTIuNjcgMC04IDEuMzQtOCA0djJoMTZ2LTJjMC0yLjY2LTUuMzMtNC04LTR6Ii8+PC9zdmc+';
+
+	/**
+	 * 
+	 */
+	Editor.shareImage = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTggMTYuMDhjLS43NiAwLTEuNDQuMy0xLjk2Ljc3TDguOTEgMTIuN2MuMDUtLjIzLjA5LS40Ni4wOS0uN3MtLjA0LS40Ny0uMDktLjdsNy4wNS00LjExYy41NC41IDEuMjUuODEgMi4wNC44MSAxLjY2IDAgMy0xLjM0IDMtM3MtMS4zNC0zLTMtMy0zIDEuMzQtMyAzYzAgLjI0LjA0LjQ3LjA5LjdMOC4wNCA5LjgxQzcuNSA5LjMxIDYuNzkgOSA2IDljLTEuNjYgMC0zIDEuMzQtMyAzczEuMzQgMyAzIDNjLjc5IDAgMS41LS4zMSAyLjA0LS44MWw3LjEyIDQuMTZjLS4wNS4yMS0uMDguNDMtLjA4LjY1IDAgMS42MSAxLjMxIDIuOTIgMi45MiAyLjkyIDEuNjEgMCAyLjkyLTEuMzEgMi45Mi0yLjkycy0xLjMxLTIuOTItMi45Mi0yLjkyeiIvPjwvc3ZnPg==';
+
+	/**
+	 *
+	 */
+	Editor.syncImage = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgNFYxTDggNWw0IDRWNmMzLjMxIDAgNiAyLjY5IDYgNiAwIDEuMDEtLjI1IDEuOTctLjcgMi44bDEuNDYgMS40NkMxOS41NCAxNS4wMyAyMCAxMy41NyAyMCAxMmMwLTQuNDItMy41OC04LTgtOHptMCAxNGMtMy4zMSAwLTYtMi42OS02LTYgMC0xLjAxLjI1LTEuOTcuNy0yLjhMNS4yNCA3Ljc0QzQuNDYgOC45NyA0IDEwLjQzIDQgMTJjMCA0LjQyIDMuNTggOCA4IDh2M2w0LTQtNC00djN6Ii8+PC9zdmc+';
+
+	/**
+	 *
+	 */
+	Editor.syncDisabledImage = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTAgNi4zNVY0LjI2Yy0uOC4yMS0xLjU1LjU0LTIuMjMuOTZsMS40NiAxLjQ2Yy4yNS0uMTIuNS0uMjQuNzctLjMzem0tNy4xNC0uOTRsMi4zNiAyLjM2QzQuNDUgOC45OSA0IDEwLjQ0IDQgMTJjMCAyLjIxLjkxIDQuMiAyLjM2IDUuNjRMNCAyMGg2di02bC0yLjI0IDIuMjRDNi42OCAxNS4xNSA2IDEzLjY2IDYgMTJjMC0xIC4yNS0xLjk0LjY4LTIuNzdsOC4wOCA4LjA4Yy0uMjUuMTMtLjUuMjUtLjc3LjM0djIuMDljLjgtLjIxIDEuNTUtLjU0IDIuMjMtLjk2bDIuMzYgMi4zNiAxLjI3LTEuMjdMNC4xNCA0LjE0IDIuODYgNS40MXpNMjAgNGgtNnY2bDIuMjQtMi4yNEMxNy4zMiA4Ljg1IDE4IDEwLjM0IDE4IDEyYzAgMS0uMjUgMS45NC0uNjggMi43N2wxLjQ2IDEuNDZDMTkuNTUgMTUuMDEgMjAgMTMuNTYgMjAgMTJjMC0yLjIxLS45MS00LjItMi4zNi01LjY0TDIwIDR6Ii8+PC9zdmc+';
+
+	/**
+	 *
+	 */
+	Editor.syncProblemImage = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMyAxMmMwIDIuMjEuOTEgNC4yIDIuMzYgNS42NEwzIDIwaDZ2LTZsLTIuMjQgMi4yNEM1LjY4IDE1LjE1IDUgMTMuNjYgNSAxMmMwLTIuNjEgMS42Ny00LjgzIDQtNS42NVY0LjI2QzUuNTUgNS4xNSAzIDguMjcgMyAxMnptOCA1aDJ2LTJoLTJ2MnpNMjEgNGgtNnY2bDIuMjQtMi4yNEMxOC4zMiA4Ljg1IDE5IDEwLjM0IDE5IDEyYzAgMi42MS0xLjY3IDQuODMtNCA1LjY1djIuMDljMy40NS0uODkgNi00LjAxIDYtNy43NCAwLTIuMjEtLjkxLTQuMi0yLjM2LTUuNjRMMjEgNHptLTEwIDloMlY3aC0ydjZ6Ii8+PC9zdmc+';
+	
+	/**
 	 * Used in the GraphViewer lightbox.
 	 */
 	Editor.tweetImage = IMAGE_PATH + '/tweet.png';
@@ -63,7 +93,96 @@
 	 * Default value for custom libraries in mxSettings.
 	 */
 	Editor.enableCustomLibraries = true;
+	
+	/**
+	 * Specifies if custom properties should be enabled.
+	 */
+	Editor.enableCustomProperties = true;
 
+	/**
+	 * Common properties for all edges.
+	 */
+	Editor.commonEdgeProperties = [
+        {type: 'separator'},
+        {name: 'arcSize', dispName: 'Arc Size', type: 'float', min:0, defVal: mxConstants.LINE_ARCSIZE},
+        {name: 'targetPortConstraint', dispName: 'Target Port Constraint', type: 'enum', defVal: 'none',
+        	enumList: [{val: 'none', dispName: 'None'}, {val: 'east', dispName: 'East'}, {val: 'north', dispName: 'North'}, {val: 'south', dispName: 'South'}, {val: 'west', dispName: 'West'}]
+        },
+        {name: 'sourcePortConstraint', dispName: 'Source Port Constraint', type: 'enum', defVal: 'none',
+        	enumList: [{val: 'none', dispName: 'None'}, {val: 'east', dispName: 'East'}, {val: 'north', dispName: 'North'}, {val: 'south', dispName: 'South'}, {val: 'west', dispName: 'West'}]
+        },
+        {name: 'fillOpacity', dispName: 'Fill Opacity', type: 'int', min: 0, max: 100, defVal: 100},
+        {name: 'strokeOpacity', dispName: 'Stroke Opacity', type: 'int', min: 0, max: 100, defVal: 100},
+        {name: 'startFill', dispName: 'Start Fill', type: 'bool', defVal: true},
+        {name: 'endFill', dispName: 'End Fill', type: 'bool', defVal: true},
+        {name: 'sourcePerimeterSpacing', dispName: 'Source Perimeter Spacing', type: 'float', defVal: 0},
+        {name: 'targetPerimeterSpacing', dispName: 'Target Perimeter Spacing', type: 'float', defVal: 0},
+        {name: 'perimeterSpacing', dispName: 'Perimeter Spacing', type: 'float', defVal: 0},
+        {name: 'anchorPointDirection', dispName: 'Anchor Point Direction', type: 'bool', defVal: true},
+        {name: 'snapToPoint', dispName: 'Snap to Point', type: 'bool', defVal: false},
+        {name: 'fixDash', dispName: 'Fixed Dash', type: 'bool', defVal: false},
+        {name: 'jiggle', dispName: 'Jiggle', type: 'float', min: 0, defVal: 1.5, isVisible: function(state)
+        {
+        	return mxUtils.getValue(state.style, 'comic', '0') == '1';
+        }},
+        {name: 'editable', dispName: 'Editable', type: 'bool', defVal: true},
+        {name: 'backgroundOutline', dispName: 'Background Outline', type: 'bool', defVal: false},
+        {name: 'bendable', dispName: 'Bendable', type: 'bool', defVal: true},
+        {name: 'movable', dispName: 'Movable', type: 'bool', defVal: true},
+        {name: 'cloneable', dispName: 'Cloneable', type: 'bool', defVal: true},
+        {name: 'deletable', dispName: 'Deletable', type: 'bool', defVal: true},
+        {name: 'loopStyle', dispName: 'Loop Style', type: 'bool', defVal: true}
+	];
+
+	/**
+	 * Common properties for all vertices.
+	 */
+	Editor.commonVertexProperties = [
+        {type: 'separator'},
+        {name: 'fillOpacity', dispName: 'Fill Opacity', type: 'int', min: 0, max: 100, defVal: 100},
+        {name: 'strokeOpacity', dispName: 'Stroke Opacity', type: 'int', min: 0, max: 100, defVal: 100},
+        {name: 'overflow', dispName: 'Text Overflow', defVal: 'visible', type: 'enum',
+        	enumList: [{val: 'visible', dispName: 'Visible'}, {val: 'hidden', dispName: 'Hidden'}, {val: 'fill', dispName: 'Fill'}, {val: 'width', dispName: 'Width'}]
+        },
+        {name: 'noLabel', dispName: 'Hide Label', type: 'bool', defVal: false},
+        {name: 'labelPadding', dispName: 'Label Padding', type: 'float', defVal: 0},
+        {name: 'direction', dispName: 'Direction', type: 'enum', defVal: 'east',
+        	enumList: [{val: 'east', dispName: 'East'}, {val: 'north', dispName: 'North'}, {val: 'south', dispName: 'South'}, {val: 'west', dispName: 'West'}]
+        },
+        {name: 'portConstraint', dispName: 'Port Constraint', type: 'enum', defVal: 'none',
+        	enumList: [{val: 'none', dispName: 'None'}, {val: 'east', dispName: 'East'}, {val: 'north', dispName: 'North'}, {val: 'south', dispName: 'South'}, {val: 'west', dispName: 'West'}]
+        },
+        {name: 'portConstraintRotation', dispName: 'Port Const. Rot.', type: 'bool', defVal: false},
+        {name: 'snapToPoint', dispName: 'Snap to Point', type: 'bool', defVal: false},
+        {name: 'perimeter', dispName: 'Perimeter', defVal: 'none', type: 'enum',
+        	enumList: [{val: 'none', dispName: 'None'},
+        			{val: 'rectanglePerimeter', dispName: 'Rectangle'}, {val: 'ellipsePerimeter', dispName: 'Ellipse'},
+        			{val: 'rhombusPerimeter', dispName: 'Rhombus'}, {val: 'trianglePerimeter', dispName: 'Triangle'},
+        			{val: 'hexagonPerimeter2', dispName: 'Hexagon'}, {val: 'lifelinePerimeter', dispName: 'Lifeline'},
+        			{val: 'orthogonalPerimeter', dispName: 'Orthogonal'}, {val: 'backbonePerimeter', dispName: 'Backbone'},
+        			{val: 'calloutPerimeter', dispName: 'Callout'}, {val: 'parallelogramPerimeter', dispName: 'Parallelogram'},
+        			{val: 'trapezoidPerimeter', dispName: 'Trapezoid'}, {val: 'stepPerimeter', dispName: 'Step'}]
+        },
+        {name: 'fixDash', dispName: 'Fixed Dash', type: 'bool', defVal: false},
+        {name: 'jiggle', dispName: 'Jiggle', type: 'float', min: 0, defVal: 1.5, isVisible: function(state)
+        {
+        	return mxUtils.getValue(state.style, 'comic', '0') == '1';
+        }},
+        {name: 'autosize', dispName: 'Autosize', type: 'bool', defVal: false},
+        {name: 'collapsible', dispName: 'Collapsible', type: 'bool', defVal: false},
+        {name: 'container', dispName: 'Container', type: 'bool', defVal: false},
+        {name: 'recursiveResize', dispName: 'Resize Children', type: 'bool', defVal: true},
+        {name: 'part', dispName: 'Part', type: 'bool', defVal: false},
+        {name: 'editable', dispName: 'Editable', type: 'bool', defVal: true},
+        {name: 'backgroundOutline', dispName: 'Background Outline', type: 'bool', defVal: false},
+        {name: 'movable', dispName: 'Movable', type: 'bool', defVal: true},
+        {name: 'resizable', dispName: 'Resizable', type: 'bool', defVal: true},
+        {name: 'resizeWidth', dispName: 'Resize Width', type: 'bool', defVal: false},
+        {name: 'resizeHeight', dispName: 'Resize Height', type: 'bool', defVal: false},
+        {name: 'rotatable', dispName: 'Rotatable', type: 'bool', defVal: true},
+        {name: 'cloneable', dispName: 'Cloneable', type: 'bool', defVal: true},
+        {name: 'deletable', dispName: 'Deletable', type: 'bool', defVal: true}
+	];
 	/**
 	 * Default value for the CSV import dialog.
 	 */
@@ -152,6 +271,10 @@
 		'#\n' +
 		'# nodespacing: 40\n' +
 		'#\n' +
+		'## Spacing between levels of hierarchical layouts. Default is 100.\n' +
+		'#\n' +
+		'# levelspacing: 100\n' +
+		'#\n' +
 		'## Spacing between parallel edges. Default is 40.\n' +
 		'#\n' +
 		'# edgespacing: 40\n' +
@@ -204,6 +327,29 @@
 			StyleFormatPanel.prototype.defaultColorSchemes = config.defaultColorSchemes || StyleFormatPanel.prototype.defaultColorSchemes;
 			Graph.prototype.defaultEdgeLength = config.defaultEdgeLength || Graph.prototype.defaultEdgeLength;
 			
+			if (config.templateFile != null)
+			{
+				EditorUi.templateFile = config.templateFile;
+			}
+			
+			if (config.customFonts)
+			{
+				Menus.prototype.defaultFonts = config.customFonts.
+					concat(Menus.prototype.defaultFonts);
+			}
+			
+			if (config.customPresetColors)
+			{
+				ColorDialog.prototype.presetColors = config.customPresetColors.
+					concat(ColorDialog.prototype.presetColors);
+			}
+			
+			if (config.customColorSchemes != null)
+			{
+				StyleFormatPanel.prototype.defaultColorSchemes = config.customColorSchemes.
+					concat(StyleFormatPanel.prototype.defaultColorSchemes);
+			}
+			
 			// Custom CSS injected directly into the page
 			if (config.css != null)
 			{
@@ -213,6 +359,18 @@
 				
 				var t = document.getElementsByTagName('script')[0];
 			  	t.parentNode.insertBefore(s, t);
+			}
+			
+			// Configures the custom libraries
+			if (config.libraries != null)
+			{
+				Sidebar.prototype.customEntries = config.libraries;
+			}
+			
+			// Defines the enabled built-in libraries.
+			if (config.enabledLibraries != null)
+			{
+				Sidebar.prototype.enabledLibraries = config.enabledLibraries;
 			}
 			
 			// Overrides default libraries
@@ -294,26 +452,33 @@
 			}
 		}
 	};
+
+	/**
+	 * Generates a unique ID of the given length
+	 */
+	Editor.GUID_ALPHABET = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_';
+
+	/**
+	 * Generates a unique ID of the given length
+	 */
+	Editor.GUID_LENGTH = 20;
 	
 	/**
 	 * Generates a unique ID of the given length
 	 */
-	Editor.s4 = function()
+	Editor.guid = function(length)
 	{
-	    return Math.floor((1 + Math.random()) * 0x10000)
-	    	.toString(16)
-	    	.substring(1);
-	};
+		var len = (length != null) ? length : Editor.GUID_LENGTH;
+		var rtn = [];
+	  
+		for (var i = 0; i < len; i++)
+		{
+			rtn.push(Editor.GUID_ALPHABET.charAt(Math.floor(Math.random() * Editor.GUID_ALPHABET.length)));
+		}
 
-	/**
-	 * Generates a unique ID of the given length
-	 */
-	Editor.guid = function()
-	{
-	  return Editor.s4() + Editor.s4() + '-' + Editor.s4() + '-' + Editor.s4() + '-' +
-	  	Editor.s4() + '-' + Editor.s4() + Editor.s4() + Editor.s4();
+		return rtn.join('');
 	};
-
+	
 	/**
 	 * This should not be enabled if reflows are required for math rendering.
 	 */
@@ -762,7 +927,7 @@
 	    if (/,\s*$/.test(text)) a.push('');
 	    return a;
 	};
-
+	
 	/**
 	 * Adds persistence for recent colors
 	 */
@@ -809,7 +974,208 @@
 		};
 	}
 
-	// Overridden to add edit shape option
+	var AddCustomPropertyDialog = function(editorUi, callback)
+	{
+		var row, td;
+		
+		var table = document.createElement('table');
+		var tbody = document.createElement('tbody');
+		table.setAttribute('cellpadding', (mxClient.IS_SF) ? '0' : '2');
+		
+		row = document.createElement('tr');
+		
+		td = document.createElement('td');
+		td.style.fontSize = '10pt';
+		td.style.width = '100px';
+		mxUtils.write(td, mxResources.get('name', null, 'Name') + ':');
+		
+		row.appendChild(td);
+		
+		var nameInput = document.createElement('input');
+		nameInput.style.width = '180px';
+
+		td = document.createElement('td');
+		td.appendChild(nameInput);
+		row.appendChild(td);
+		
+		tbody.appendChild(row);
+			
+		row = document.createElement('tr');
+		
+		td = document.createElement('td');
+		td.style.fontSize = '10pt';
+		mxUtils.write(td, mxResources.get('type', null, 'Type') + ':');
+		
+		row.appendChild(td);
+		
+		var typeSelect = document.createElement('select');
+		typeSelect.style.width = '180px';
+
+		var boolOption = document.createElement('option');
+		boolOption.setAttribute('value', 'bool');
+		mxUtils.write(boolOption, mxResources.get('bool', null, 'Boolean'));
+		typeSelect.appendChild(boolOption);
+		
+		var clrOption = document.createElement('option');
+		clrOption.setAttribute('value', 'color');
+		mxUtils.write(clrOption, mxResources.get('color', null, 'Color'));
+		typeSelect.appendChild(clrOption);
+		
+		var enumOption = document.createElement('option');
+		enumOption.setAttribute('value', 'enum');
+		mxUtils.write(enumOption, mxResources.get('enum', null, 'Enumeration'));
+		typeSelect.appendChild(enumOption);
+
+		var floatOption = document.createElement('option');
+		floatOption.setAttribute('value', 'float');
+		mxUtils.write(floatOption, mxResources.get('float', null, 'Float'));
+		typeSelect.appendChild(floatOption);
+
+		var intOption = document.createElement('option');
+		intOption.setAttribute('value', 'int');
+		mxUtils.write(intOption, mxResources.get('int', null, 'Int'));
+		typeSelect.appendChild(intOption);
+		
+		var strOption = document.createElement('option');
+		strOption.setAttribute('value', 'string');
+		mxUtils.write(strOption, mxResources.get('string', null, 'String'));
+		typeSelect.appendChild(strOption);
+
+		td = document.createElement('td');
+		td.appendChild(typeSelect);
+		row.appendChild(td);
+		
+		tbody.appendChild(row);
+		
+		row = document.createElement('tr');
+
+		td = document.createElement('td');
+		td.style.fontSize = '10pt';
+		mxUtils.write(td, mxResources.get('dispName', null, 'Display Name') + ':');
+		
+		row.appendChild(td);
+		
+		var dispNameInput = document.createElement('input');
+		dispNameInput.style.width = '180px';
+
+		td = document.createElement('td');
+		td.appendChild(dispNameInput);
+		row.appendChild(td);
+
+		tbody.appendChild(row);
+
+		var listRow = document.createElement('tr');
+
+		td = document.createElement('td');
+		td.style.fontSize = '10pt';
+		mxUtils.write(td, mxResources.get('enumList', null, 'Enum List') + ' (csv):');
+		
+		listRow.appendChild(td);
+		
+		var enumListInput = document.createElement('input');
+		enumListInput.style.width = '180px';
+
+		td = document.createElement('td');
+		td.appendChild(enumListInput);
+		listRow.appendChild(td);
+
+		listRow.style.display = 'none';
+		tbody.appendChild(listRow);
+		
+		table.appendChild(tbody);
+		
+		function typeChanged()
+		{
+			if (typeSelect.value === 'enum')
+			{
+				listRow.style.display = '';
+				this.container.parentNode.style.height = "150px";
+				
+			}
+			else
+			{
+				listRow.style.display = 'none';
+				this.container.parentNode.style.height = "130px";
+			}
+		};
+		
+		mxEvent.addListener(typeSelect, 'change', mxUtils.bind(this, typeChanged));
+
+		row = document.createElement('tr');
+		td = document.createElement('td');
+		td.setAttribute('align', 'right');
+		td.style.paddingTop = '22px';
+		td.colSpan = 2;
+		
+		var addBtn = mxUtils.button(mxResources.get('add', null, 'Add'), mxUtils.bind(this, function()
+		{
+	    	var name = nameInput.value;
+
+	    	if (name == "")
+    		{
+	    		nameInput.style.border = "1px solid red";
+	    		return;
+    		}
+	    	
+			var type = typeSelect.value;
+	    	var dispName = dispNameInput.value;
+
+	    	if (dispName == "")
+    		{
+	    		dispNameInput.style.border = "1px solid red";
+	    		return;
+    		}
+
+	    	var enumList = enumListInput.value;
+			
+	    	if (enumList == "" && type == "enum")
+    		{
+	    		enumListInput.style.border = "1px solid red";
+	    		return;
+	    		
+    		}
+	    	
+			if (enumList != null)
+			{
+				enumList = enumList.split(',');
+				
+				for (var i = 0; i < enumList.length; i++)
+				{
+					enumList[i] = enumList[i].trim();
+				}
+			}
+			
+			if (callback)
+			{
+				callback(editorUi, name, type, dispName, enumList);
+				editorUi.hideDialog();
+			}
+		}));
+		addBtn.className = 'geBtn gePrimaryBtn';
+		
+		var cancelBtn = mxUtils.button(mxResources.get('cancel'), function()
+		{
+			editorUi.hideDialog();
+		});
+		cancelBtn.className = 'geBtn';
+		
+		if (editorUi.editor.cancelFirst)
+		{
+			td.appendChild(cancelBtn);
+			td.appendChild(addBtn);
+		}
+		else
+		{
+			td.appendChild(addBtn);
+			td.appendChild(cancelBtn);
+		}
+
+		row.appendChild(td);
+		tbody.appendChild(row);
+		table.appendChild(tbody);
+		this.container = table;
+	};
+	
 	if (window.StyleFormatPanel != null)
 	{
 		var formatInit = Format.prototype.init;
@@ -925,7 +1291,7 @@
 			if (graph.isEnabled())
 			{
 				var file = ui.getCurrentFile();
-	
+
 				if (file != null && file.isAutosaveOptional())
 				{
 					var opt = this.createOption(mxResources.get('autosave'), function()
@@ -981,25 +1347,240 @@
 	                }
 	            });
 	            
-	            option.style.paddingTop = '0px';
+	            option.style.paddingTop = '5px';
 	            div.appendChild(option);
 	            
 	            var help = ui.menus.createHelpLink('https://desk.draw.io/support/solutions/articles/16000032875');
 	            help.style.position = 'relative';
-	            help.style.top = '4px';
+	            help.style.marginLeft = '6px';
+	            help.style.top = '2px';
 	            option.appendChild(help);
 	        }
 	        
 			return div;
 		};
+
+		mxCellRenderer.prototype.defaultVertexShape.prototype.customProperties = [
+	        {name: 'arcSize', dispName: 'Arc Size', type: 'float', min:0, defVal: mxConstants.LINE_ARCSIZE},
+	        {name: 'absoluteArcSize', dispName: 'Abs. Arc Size', type: 'bool', defVal: false}
+	      ];
+
+		mxCellRenderer.defaultShapes['link'].prototype.customProperties = [
+	        {name: 'width', dispName: 'Width', type: 'float', min:0, defVal: 4}
+		];
+
+		mxCellRenderer.defaultShapes['flexArrow'].prototype.customProperties = [
+	        {name: 'width', dispName: 'Width', type: 'float', min:0, defVal: 10},
+	        {name: 'startWidth', dispName: 'Start Width', type: 'float', min:0, defVal: 20},
+	        {name: 'endWidth', dispName: 'End Width', type: 'float', min:0, defVal: 20}
+		];
+
+		mxCellRenderer.defaultShapes['process'].prototype.customProperties = [
+			{name: 'size', dispName: 'Indent', type: 'float', min: 0, max: 0.5, defVal: 0.1}
+		];
+
+		mxCellRenderer.defaultShapes['rhombus'].prototype.customProperties = [
+	        {name: 'arcSize', dispName: 'Arc Size', type: 'float', min:0, max: 50, defVal: mxConstants.LINE_ARCSIZE},
+	        {name: 'double', dispName: 'Double', type: 'bool', defVal: false}
+		];
+		
+		mxCellRenderer.defaultShapes['partialRectangle'].prototype.customProperties = [
+	        {name: 'top', dispName: 'Top Line', type: 'bool', defVal: true},
+	        {name: 'bottom', dispName: 'Bottom Line', type: 'bool', defVal: true},
+	        {name: 'left', dispName: 'Left Line', type: 'bool', defVal: true},
+	        {name: 'right', dispName: 'Right Line', type: 'bool', defVal: true}
+        ];
+		
+		mxCellRenderer.defaultShapes['parallelogram'].prototype.customProperties = [
+	        {name: 'arcSize', dispName: 'Arc Size', type: 'float', min:0, defVal: mxConstants.LINE_ARCSIZE},
+	        {name: 'size', dispName: 'Slope Angle', type: 'float', min:0, max: 1, defVal: 0.2}
+		];
+		
+		mxCellRenderer.defaultShapes['hexagon'].prototype.customProperties = [
+	        {name: 'arcSize', dispName: 'Arc Size', type: 'float', min:0, defVal: mxConstants.LINE_ARCSIZE},
+	        {name: 'size', dispName: 'Slope Angle', type: 'float', min:0, max: 1, defVal: 0.25}
+		];
+		
+		mxCellRenderer.defaultShapes['triangle'].prototype.customProperties = [
+	        {name: 'arcSize', dispName: 'Arc Size', type: 'float', min:0, defVal: mxConstants.LINE_ARCSIZE}
+		];
+		
+		mxCellRenderer.defaultShapes['document'].prototype.customProperties = [
+	        {name: 'size', dispName: 'Size', type: 'float', defVal: 0.3, min:0, max:1}
+		];
+		
+		mxCellRenderer.defaultShapes['internalStorage'].prototype.customProperties = [
+	        {name: 'arcSize', dispName: 'Arc Size', type: 'float', min:0, defVal: mxConstants.LINE_ARCSIZE},
+	        {name: 'dx', dispName: 'Left Line', type: 'float', min:0, defVal: 20},
+	        {name: 'dy', dispName: 'Top Line', type: 'float', min:0, defVal: 20}
+		];
+		
+		mxCellRenderer.defaultShapes['cube'].prototype.customProperties = [
+	        {name: 'size', dispName: 'Size', type: 'float', min:0, defVal:20 }
+		];
+		
+		mxCellRenderer.defaultShapes['step'].prototype.customProperties = [
+	        {name: 'size', dispName: 'Notch Size', type: 'float', min:0, defVal:20},
+	        {name: 'fixedSize', dispName: 'Fixed Size', type: 'bool', defVal:true}
+		];
+		
+		mxCellRenderer.defaultShapes['trapezoid'].prototype.customProperties = [
+	        {name: 'arcSize', dispName: 'Arc Size', type: 'float', min:0, defVal: mxConstants.LINE_ARCSIZE},
+	        {name: 'size', dispName: 'Slope Angle', type: 'float', min:0, max: 1, defVal: 0.2}
+		];
+		
+		mxCellRenderer.defaultShapes['tape'].prototype.customProperties = [
+	        {name: 'size', dispName: 'Size', type: 'float', min:0, max:1, defVal:0.4 }
+		];
+		
+		mxCellRenderer.defaultShapes['note'].prototype.customProperties = [
+	        {name: 'size', dispName: 'Fold Size', type: 'float', min:0, defVal: 30}
+	    ];
+		
+		mxCellRenderer.defaultShapes['card'].prototype.customProperties = [
+	        {name: 'arcSize', dispName: 'Arc Size', type: 'float', min:0, defVal: mxConstants.LINE_ARCSIZE},
+	        {name: 'size', dispName: 'Cutoff Size', type: 'float', min:0, defVal: 30}
+	    ];
+		
+		mxCellRenderer.defaultShapes['callout'].prototype.customProperties = [
+	        {name: 'arcSize', dispName: 'Arc Size', type: 'float', min:0, defVal: mxConstants.LINE_ARCSIZE},
+	        {name: 'base', dispName: 'Callout Width', type: 'float', min:0, defVal: 20},
+	        {name: 'size', dispName: 'Callout Length', type: 'float', min:0, defVal: 30},
+	        {name: 'position', dispName: 'Callout Position', type: 'float', min:0, max:1, defVal: 0.5},
+	        {name: 'position2', dispName: 'Callout Tip Position', type: 'float', min:0, max:1, defVal: 0.5}
+	    ];
+		
+		mxCellRenderer.defaultShapes['folder'].prototype.customProperties = [
+	        {name: 'tabWidth', dispName: 'Tab Width', type: 'float'},
+	        {name: 'tabHeight', dispName: 'Tab Height', type: 'float'},
+	        {name: 'tabPosition', dispName: 'Tap Position', type: 'enum',
+	        	enumList: [{val: 'left', dispName: 'Left'}, {val: 'right', dispName: 'Right'}]
+	        }
+	    ];
+		
+		mxCellRenderer.defaultShapes['swimlane'].prototype.customProperties = [
+	        {name: 'arcSize', dispName: 'Arc Size', type: 'float', min:0, defVal: 15},
+	        {name: 'startSize', dispName: 'Header Size', type: 'float'},
+	        {name: 'horizontal', dispName: 'Horizontal', type: 'bool', defVal: true}
+	    ];
+		
+		mxCellRenderer.defaultShapes['doubleEllipse'].prototype.customProperties = [
+	        {name: 'margin', dispName: 'Indent', type: 'float', min:0, defVal:4}
+	    ];
+		
+		mxCellRenderer.defaultShapes['ext'].prototype.customProperties = [
+	        {name: 'arcSize', dispName: 'Arc Size', type: 'float', min:0, defVal: 15},
+			{name: 'double', dispName: 'Double', type: 'bool', defVal: false},
+	        {name: 'margin', dispName: 'Indent', type: 'float', min: 0, defVal:0}
+	    ];
+		
+		mxCellRenderer.defaultShapes['curlyBracket'].prototype.customProperties = [
+			{name: 'rounded', dispName: 'Rounded', type: 'bool', defVal: true},
+	        {name: 'size', dispName: 'Size', type: 'float', min:0, max: 1, defVal: 0.5}
+	    ];
+		
+		mxCellRenderer.defaultShapes['image'].prototype.customProperties = [
+			{name: 'imageAspect', dispName: 'Fixed Image Aspect', type: 'bool', defVal:true}
+	    ];
+		
+		mxCellRenderer.defaultShapes['label'].prototype.customProperties = [
+			{name: 'imageAspect', dispName: 'Fixed Image Aspect', type: 'bool', defVal:true},
+			{name: 'imageAlign', dispName: 'Image Align', type: 'enum',
+				enumList: [{val: 'left', dispName: 'Left'}, 
+						   {val: 'center', dispName: 'Center'}, 
+						   {val: 'right', dispName: 'Right'}], defVal: 'left'},
+			{name: 'imageVerticalAlign', dispName: 'Image Vertical Align', type: 'enum',
+				enumList: [{val: 'top', dispName: 'Top'}, 
+					       {val: 'middle', dispName: 'Middle'}, 
+					       {val: 'bottom', dispName: 'Bottom'}], defVal: 'middle'},
+	        {name: 'imageWidth', dispName: 'Image Width', type: 'float', min:0, defVal: 24},
+	        {name: 'imageHeight', dispName: 'Image Height', type: 'float', min:0, defVal: 24},
+	        {name: 'arcSize', dispName: 'Arc Size', type: 'float', min:0, defVal: 12},
+	        {name: 'absoluteArcSize', dispName: 'Abs. Arc Size', type: 'bool', defVal: false}
+	    ];
+		
+		mxCellRenderer.defaultShapes['dataStorage'].prototype.customProperties = [
+	        {name: 'size', dispName: 'Size', type: 'float', min:0, max:1, defVal:0.1 }
+		];
+		
+		mxCellRenderer.defaultShapes['manualInput'].prototype.customProperties = [
+	        {name: 'size', dispName: 'Size', type: 'float', min:0, defVal:30 },
+	        {name: 'arcSize', dispName: 'Arc Size', type: 'float', min:0, defVal: 20}
+		];
+		
+		mxCellRenderer.defaultShapes['loopLimit'].prototype.customProperties = [
+	        {name: 'size', dispName: 'Size', type: 'float', min:0, defVal:20 },
+	        {name: 'arcSize', dispName: 'Arc Size', type: 'float', min:0, defVal: 20}
+		];
+		
+		mxCellRenderer.defaultShapes['offPageConnector'].prototype.customProperties = [
+	        {name: 'size', dispName: 'Size', type: 'float', min:0, defVal:38 },
+	        {name: 'arcSize', dispName: 'Arc Size', type: 'float', min:0, defVal: 20}
+		];
+		
+		mxCellRenderer.defaultShapes['display'].prototype.customProperties = [
+	        {name: 'size', dispName: 'Size', type: 'float', min: 0, max: 1, defVal: 0.25 }
+		];
+		
+		mxCellRenderer.defaultShapes['singleArrow'].prototype.customProperties = [
+	        {name: 'arrowWidth', dispName: 'Arrow Width', type: 'float', min: 0, max: 1, defVal: 0.3 },
+	        {name: 'arrowSize', dispName: 'Arrowhead Length', type: 'float', min: 0, max: 1, defVal: 0.2 }
+		];
+		
+		mxCellRenderer.defaultShapes['doubleArrow'].prototype.customProperties = [
+	        {name: 'arrowWidth', dispName: 'Arrow Width', type: 'float', min: 0, max: 1, defVal: 0.3 },
+	        {name: 'arrowSize', dispName: 'Arrowhead Length', type: 'float', min: 0, max: 1, defVal: 0.2 }
+		];
+		
+		mxCellRenderer.defaultShapes['cross'].prototype.customProperties = [
+	        {name: 'size', dispName: 'Size', type: 'float', min: 0, max: 1, defVal: 0.2 }
+		];
+		
+		mxCellRenderer.defaultShapes['corner'].prototype.customProperties = [
+	        {name: 'dx', dispName: 'Width1', type: 'float', min: 0, defVal: 20 },
+	        {name: 'dy', dispName: 'Width2', type: 'float', min: 0, defVal: 20 }
+		];
+		
+		mxCellRenderer.defaultShapes['tee'].prototype.customProperties = [
+	        {name: 'dx', dispName: 'Width1', type: 'float', min: 0, defVal: 20 },
+	        {name: 'dy', dispName: 'Width2', type: 'float', min: 0, defVal: 20 }
+		];
+		
+		mxCellRenderer.defaultShapes['umlLifeline'].prototype.customProperties = [
+			{name: 'participant', dispName:'Participant', type:'enum', defVal:'none', enumList:[
+				{val:'none', dispName: 'Default'},	
+				{val:'umlActor', dispName: 'Actor'},	
+				{val:'umlBoundary', dispName: 'Boundary'},	
+				{val:'umlEntity', dispName: 'Entity'},	
+				{val:'umlControl', dispName: 'Control'},	
+				]},
+			{name: 'size', dispName:'Height', type:'float', defVal:40, min:0}
+		];
+		
+		mxCellRenderer.defaultShapes['umlFrame'].prototype.customProperties = [
+			{name: 'width', dispName:'Title Width', type:'float', defVal:60, min:0},
+			{name: 'height', dispName:'Title Height', type:'float', defVal:30, min:0}
+		];
 		
 		/**
 		 * Configures global color schemes.
 		 */
-		StyleFormatPanel.prototype.defaultColorSchemes = [[null, {fill: '#f5f5f5', stroke: '#666666'},
+		StyleFormatPanel.prototype.defaultColorSchemes = [[null, {fill: '#f5f5f5', stroke: '#666666', font: '#333333'},
 			{fill: '#dae8fc', stroke: '#6c8ebf'}, {fill: '#d5e8d4', stroke: '#82b366'},
 			{fill: '#ffe6cc', stroke: '#d79b00'}, {fill: '#fff2cc', stroke: '#d6b656'},
 			{fill: '#f8cecc', stroke: '#b85450'}, {fill: '#e1d5e7', stroke: '#9673a6'}],
+			[{fill: '#60a917', stroke: '#2D7600', font: '#ffffff'}, {fill: '#008a00', stroke: '#005700', font: '#ffffff'},
+			{fill: '#1ba1e2', stroke: '#006EAF', font: '#ffffff'}, {fill: '#0050ef', stroke: '#001DBC', font: '#ffffff'},
+			{fill: '#6a00ff', stroke: '#3700CC', font: '#ffffff'}, {fill: '#aa00ff', stroke: '#7700CC', font: '#ffffff'},
+			{fill: '#d80073', stroke: '#A50040', font: '#ffffff'}, {fill: '#a20025', stroke: '#6F0000', font: '#ffffff'}],
+			[{fill: '#e51400', stroke: '#B20000', font: '#ffffff'}, {fill: '#fa6800', stroke: '#C73500', font: '#ffffff'},
+			{fill: '#f0a30a', stroke: '#BD7000', font: '#ffffff'}, {fill: '#e3c800', stroke: '#B09500', font: '#ffffff'},
+			{fill: '#6d8764', stroke: '#3A5431', font: '#ffffff'}, {fill: '#647687', stroke: '#314354', font: '#ffffff'},
+			{fill: '#76608a', stroke: '#432D57', font: '#ffffff'}, {fill: '#a0522d', stroke: '#6D1F00', font: '#ffffff'}],
+			[null, {fill: mxConstants.NONE, stroke: '#36393d'},
+			{fill: '#fad7ac', stroke: '#b46504'}, {fill: '#fad9d5', stroke: '#ae4132'},
+			{fill: '#b0e3e6', stroke: '#0e8088'}, {fill: '#b1ddf0', stroke: '#10739e'},
+			{fill: '#d0cee2', stroke: '#56517e'}, {fill: '#bac8d3', stroke: '#23445d'}],
 		    [null,
 			{fill: '#f5f5f5', stroke: '#666666', gradient: '#b3b3b3'},
 			{fill: '#dae8fc', stroke: '#6c8ebf', gradient: '#7ea6e0'},
@@ -1012,7 +1593,88 @@
 			{fill: '#f9f7ed', stroke: '#36393d'}, {fill: '#ffcc99', stroke: '#36393d'},
 			{fill: '#cce5ff', stroke: '#36393d'}, {fill: '#ffff88', stroke: '#36393d'},
 			{fill: '#cdeb8b', stroke: '#36393d'}, {fill: '#ffcccc', stroke: '#36393d'}]];
+		
+		/**
+		 * Configures custom color schemes.
+		 */
+		StyleFormatPanel.prototype.customColorSchemes = null;
 
+		StyleFormatPanel.prototype.findCommonProperties = function(cell, properties, addAll)
+		{
+			if (properties == null) return;
+			
+			var handleCustomProp = function(custProperties)
+			{
+				if (custProperties != null)
+				{
+					if (addAll)
+					{
+						for (var i = 0; i < custProperties.length; i++)
+						{
+							properties[custProperties[i].name] = custProperties[i];
+						}
+					}
+					else
+					{
+						for (var key in properties)
+						{
+							var found = false;
+							
+							for (var i = 0; i < custProperties.length; i++)
+							{
+								if (custProperties[i].name == key && custProperties[i].type == properties[key].type)
+								{
+									found = true;
+									break;
+								}
+							}
+							
+							if (!found)
+							{
+								delete properties[key];
+							}
+						}
+					}
+				}
+			};
+			
+			var view = this.editorUi.editor.graph.view;
+			var state = view.getState(cell);
+			
+			if (state != null && state.shape != null)
+			{
+				//Add common properties to all shapes
+				if (!state.shape.commonCustomPropAdded)
+				{
+					state.shape.commonCustomPropAdded = true;
+					state.shape.customProperties = state.shape.customProperties || [];
+					
+					if (state.cell.vertex)
+					{
+						Array.prototype.push.apply(state.shape.customProperties, Editor.commonVertexProperties);					
+					}
+					else
+					{
+						Array.prototype.push.apply(state.shape.customProperties, Editor.commonEdgeProperties);
+					}
+				}
+				
+				handleCustomProp(state.shape.customProperties);
+			}
+			
+			//This currently is not needed but let's keep it in case we needed in the future
+			var userCustomProp = cell.getAttribute('customProperties');
+			
+			if (userCustomProp != null)
+			{
+				try
+				{
+					handleCustomProp(JSON.parse(userCustomProp));
+				}
+				catch(e){}
+			}
+		};
+		
 		/**
 		 * Adds predefiend styles.
 		 */
@@ -1029,6 +1691,26 @@
 			}
 			
 			styleFormatPanelInit.apply(this, arguments);
+
+			if (Editor.enableCustomProperties)
+			{
+				var properties = {};
+				var vertices = sstate.vertices;
+				var edges = sstate.edges;
+				
+				for (var i = 0; i < vertices.length; i++) 
+				{
+					this.findCommonProperties(vertices[i], properties, i == 0);
+				}
+				
+				for (var i = 0; i < edges.length; i++) 
+				{
+					this.findCommonProperties(edges[i], properties, vertices.length == 0 && i == 0);
+				}
+
+				if (Object.getOwnPropertyNames(properties).length > 0)
+					this.container.appendChild(this.addProperties(this.createPanel(), properties, sstate));
+			}
 		};
 
 		/**
@@ -1038,6 +1720,8 @@
 		
 		StyleFormatPanel.prototype.addStyleOps = function(div)
 		{
+			var graph = this.editorUi.editor.graph;
+			
 			var btn = mxUtils.button(mxResources.get('copyStyle'), mxUtils.bind(this, function(evt)
 			{
 				this.editorUi.actions.get('copyStyle').funct();
@@ -1064,7 +1748,559 @@
 			
 			return styleFormatPanelAddStyleOps.apply(this, arguments);
 		};
+		
+		/**
+		 * Initial collapsed state of the properties panel.
+		 */
+		EditorUi.prototype.propertiesCollapsed = true;
 
+		/**
+		 * Create Properties Panel
+		 */
+		StyleFormatPanel.prototype.addProperties = function(div, properties, state)
+		{
+			var that = this;
+			var graph = this.editorUi.editor.graph;
+			var secondLevel = [];
+			
+			function insertAfter(newElem, curElem)
+			{
+				curElem.parentNode.insertBefore(newElem, curElem.nextSibling);
+			};
+			
+			function applyStyleVal(pName, newVal, prop, delIndex)
+			{
+				graph.getModel().beginUpdate();
+				try
+				{
+					var changedProps = [];
+					var changedVals = [];
+
+					if (prop.index != null)
+					{
+						var allVals = [];
+						var curVal = prop.parentRow.nextSibling;
+						
+						while(curVal && curVal.getAttribute('data-pName') == pName)
+						{
+							allVals.push(curVal.getAttribute('data-pValue'));
+							curVal = curVal.nextSibling;
+						}
+						
+						if (prop.index < allVals.length)
+						{
+							if (delIndex != null)
+							{
+								allVals.splice(delIndex, 1);
+							}
+							else
+							{
+								allVals[prop.index] = newVal;
+							}
+						}
+						else
+						{
+							allVals.push(newVal);
+						}
+						
+						if (prop.size != null && allVals.length > prop.size) //trim the array to the specifies size
+						{
+							allVals = allVals.slice(0, prop.size);
+						}
+						
+						newVal = allVals.join(',');
+						
+						if (prop.countProperty != null)
+						{
+							graph.setCellStyles(prop.countProperty, allVals.length, graph.getSelectionCells());
+							
+							changedProps.push(prop.countProperty);
+							changedVals.push(allVals.length);
+						}
+					}
+
+					graph.setCellStyles(pName, newVal, graph.getSelectionCells());
+					changedProps.push(pName);
+					changedVals.push(newVal);
+					
+					if (prop.dependentProps != null)
+					{
+						for (var i = 0; i < prop.dependentProps.length; i++)
+						{
+							var defVal = prop.dependentPropsDefVal[i];
+							var vals = prop.dependentPropsVals[i];
+							
+							if (vals.length > newVal)
+							{
+								vals = vals.slice(0, newVal);
+							}
+							else
+							{
+								for (var j = vals.length; j < newVal; j++)
+								{
+									vals.push(defVal);
+								}
+							}
+							
+							vals = vals.join(',');
+							graph.setCellStyles(prop.dependentProps[i], vals, graph.getSelectionCells());
+							changedProps.push(prop.dependentProps[i]);
+							changedVals.push(vals);
+						}
+					}
+					
+					that.editorUi.fireEvent(new mxEventObject('styleChanged', 'keys', changedProps,
+						'values', changedVals, 'cells', graph.getSelectionCells()));
+				}
+				finally
+				{
+					graph.getModel().endUpdate();
+				}
+			}
+			
+			function setElementPos(td, elem, adjustHeight)
+			{
+				var divPos = mxUtils.getOffset(div, true);
+				var pos = mxUtils.getOffset(td, true);
+				elem.style.position = 'absolute';
+				elem.style.left = (pos.x - divPos.x) + 'px';
+				elem.style.top = (pos.y - divPos.y) + 'px';
+				elem.style.width = td.offsetWidth + 'px';
+				elem.style.height = (td.offsetHeight - (adjustHeight? 4 : 0)) + 'px';
+				elem.style.zIndex = 5;
+			};
+			
+			function createColorBtn(pName, pValue, prop)
+			{
+				var clrDiv = document.createElement('div');
+				clrDiv.style.width = '32px';
+				clrDiv.style.height = '4px';
+				clrDiv.style.margin = '2px';
+				clrDiv.style.border = '1px solid black';
+				clrDiv.style.background = !pValue || pValue == 'none'? 'url(\'' + Dialog.prototype.noColorImage + '\')' : pValue;
+
+				btn = mxUtils.button('', mxUtils.bind(that, function(evt)
+				{
+					this.editorUi.pickColor(pValue, function(color)
+					{
+						clrDiv.style.background = color == 'none'? 'url(\'' + Dialog.prototype.noColorImage + '\')' : color;
+						applyStyleVal(pName, color, prop);
+					});
+					mxEvent.consume(evt);
+				}));
+				
+				btn.style.height = '12px';
+				btn.style.width = '40px';
+				btn.className = 'geColorBtn';
+				
+				btn.appendChild(clrDiv);
+				return btn;
+			};
+			
+			function createDynArrList(pName, pValue, subType, defVal, countProperty, myRow, flipBkg)
+			{
+				if (pValue != null)
+				{
+					var vals = pValue.split(',');
+					secondLevel.push({name: pName, values: vals, type: subType, defVal: defVal, countProperty: countProperty, parentRow: myRow, isDeletable: true, flipBkg: flipBkg});
+				}
+				
+				btn = mxUtils.button('+', mxUtils.bind(that, function(evt)
+				{
+					var beforeElem = myRow;
+					var index = 0;
+					
+					while (beforeElem.nextSibling != null)
+					{
+						var cur = beforeElem.nextSibling;
+						var elemPName = cur.getAttribute('data-pName');
+
+						if (elemPName == pName)
+						{
+							beforeElem = beforeElem.nextSibling;
+							index++;
+						}
+						else
+						{
+							break;
+						}
+					}
+					
+					var newProp = {type: subType, parentRow: myRow, index: index, isDeletable: true, defVal: defVal, countProperty: countProperty};
+					var arrItem = createPropertyRow(pName, '', newProp, index % 2 == 0, flipBkg);
+					applyStyleVal(pName, defVal, newProp);
+					insertAfter(arrItem, beforeElem);
+					
+					mxEvent.consume(evt);
+				}));
+				
+				btn.style.height = '16px';
+				btn.style.width = '25px';
+				btn.className = 'geColorBtn';
+				
+				return btn;
+			};
+			
+			function createStaticArrList(pName, pValue, subType, defVal, size, myRow, flipBkg)
+			{
+				if (size > 0)
+				{
+					var vals = new Array(size);
+					
+					var curVals = pValue != null? pValue.split(',') : [];
+					
+					for (var i = 0; i < size; i++) 
+					{
+						vals[i] = curVals[i] != null? curVals[i] : (defVal != null? defVal : '');
+					}
+					
+					secondLevel.push({name: pName, values: vals, type: subType, defVal: defVal, parentRow: myRow, flipBkg: flipBkg, size: size});
+				}
+				
+				return document.createElement('div'); //empty cell
+			};
+			
+			function createCheckbox(pName, pValue, prop)
+			{
+				var input = document.createElement('input');
+				input.type = 'checkbox';
+				input.checked = pValue == '1';
+				
+				mxEvent.addListener(input, 'change', function() 
+				{
+					applyStyleVal(pName, input.checked? '1' : '0', prop);
+				});
+				return input;
+			};
+			
+			function createPropertyRow(pName, pValue, prop, isOdd, flipBkg)
+			{
+				var pDiplayName = prop.dispName;
+				var pType = prop.type;
+				var row = document.createElement('tr');
+				row.className = 'gePropRow' + (flipBkg? 'Dark' : '') + (isOdd? 'Alt' : '') + ' gePropNonHeaderRow';
+				row.setAttribute('data-pName', pName);
+				row.setAttribute('data-pValue', pValue);
+				var rightAlig = false;
+				
+				if (prop.index != null)
+				{
+					row.setAttribute('data-index', prop.index);
+					pDiplayName = (pDiplayName != null? pDiplayName : '') + '[' + prop.index + ']';
+					rightAlig = true;
+				}
+				
+				var td = document.createElement('td');
+				td.className = 'gePropRowCell';
+				td.innerHTML = mxUtils.htmlEntities(mxResources.get(pDiplayName, null, pDiplayName));
+				
+				if (rightAlig)
+				{
+					td.style.textAlign = 'right';
+				}
+					
+				row.appendChild(td);
+				td = document.createElement('td');
+				td.className = 'gePropRowCell';
+				
+				if (pType == 'color')
+				{
+					td.appendChild(createColorBtn(pName, pValue, prop));
+				}
+				else if (pType == 'bool' || pType == 'boolean')
+				{
+					td.appendChild(createCheckbox(pName, pValue, prop));
+				}
+				else if (pType == 'enum')
+				{
+					var pEnumList = prop.enumList;
+					
+					for (var i = 0; i < pEnumList.length; i++)
+					{
+						var op = pEnumList[i];
+						
+						if (op.val == pValue)
+						{
+							td.innerHTML = mxUtils.htmlEntities(mxResources.get(op.dispName, null, op.dispName));
+							break;
+						}
+					}
+					
+					mxEvent.addListener(td, 'click', mxUtils.bind(that, function()
+					{
+						var select = document.createElement('select');
+						setElementPos(td, select);
+
+						for (var i = 0; i < pEnumList.length; i++)
+						{
+							var op = pEnumList[i];
+							var opElem = document.createElement('option');
+							opElem.value = mxUtils.htmlEntities(op.val);
+							opElem.innerHTML = mxUtils.htmlEntities(mxResources.get(op.dispName, null, op.dispName));
+							select.appendChild(opElem);
+						}
+						
+						select.value = pValue;
+						
+						div.appendChild(select);
+
+						mxEvent.addListener(select, 'change', function()
+						{
+							var newVal = mxUtils.htmlEntities(select.value);
+							applyStyleVal(pName, newVal, prop);
+							//set value triggers a redraw of the panel which removes the select and updates the row
+						});
+			
+						select.focus();
+
+						//FF calls blur on focus! so set the event after focusing (not with selects but to be safe)
+						mxEvent.addListener(select, 'blur', function()
+						{
+							div.removeChild(select);
+						});
+					}));
+				}
+				else if (pType == 'dynamicArr')
+				{
+					td.appendChild(createDynArrList(pName, pValue, prop.subType, prop.subDefVal, prop.countProperty, row, flipBkg));
+				}
+				else if (pType == 'staticArr')
+				{
+					td.appendChild(createStaticArrList(pName, pValue, prop.subType, prop.subDefVal, prop.size, row, flipBkg));
+				}
+				else
+				{
+					td.innerHTML = pValue;
+					mxEvent.addListener(td, 'click', mxUtils.bind(that, function()
+					{
+						var input = document.createElement('input');
+						setElementPos(td, input, true);
+						input.value = pValue;
+						input.className = 'gePropEditor';
+						
+						if ((pType == 'int' || pType == 'float') && !prop.allowAuto)
+						{
+							input.type = 'number';
+							input.step = pType == 'int'? '1' : 'any';
+							
+							if (prop.min != null)
+							{
+								input.min = parseFloat(prop.min); 
+							}
+							
+							if (prop.max != null)
+							{
+								input.max = parseFloat(prop.max);
+							}
+						}
+						
+						div.appendChild(input);
+
+						function setInputVal()
+						{
+							var inputVal = input.value;
+							inputVal = inputVal.length == 0 && pType != 'string'? 0 : inputVal;
+							
+							if (prop.allowAuto)
+							{
+								if (inputVal.trim().toLowerCase() == 'auto')
+								{
+									inputVal = 'auto';
+									pType = 'string';
+								}
+								else
+								{
+									inputVal = parseFloat(inputVal);
+									inputVal = isNaN(inputVal)? 0 : inputVal;
+								}
+							}
+							
+							if (prop.min != null && inputVal < prop.min)
+							{
+								inputVal = prop.min;
+							} 
+							else if (prop.max != null && inputVal > prop.max)
+							{
+								inputVal = prop.max;
+							}
+
+							var newVal = mxUtils.htmlEntities((pType == 'int'? parseInt(inputVal) : inputVal) + '');
+							
+							applyStyleVal(pName, newVal, prop);
+						}
+						
+						mxEvent.addListener(input, 'keypress', function(e)
+						{
+							if (e.keyCode == 13) 
+							{
+								setInputVal();
+								//set value triggers a redraw of the panel which removes the input
+							}
+						});
+						
+						input.focus();
+						
+						//FF calls blur on focus! so set the event after focusing
+						mxEvent.addListener(input, 'blur', function() 
+						{
+							setInputVal();
+						});
+					}));
+				}
+
+				if (prop.isDeletable)
+				{
+					var delBtn = mxUtils.button('-', mxUtils.bind(that, function(evt)
+					{
+						//delete the node by refreshing the properties
+						applyStyleVal(pName, '', prop, prop.index);
+						
+						mxEvent.consume(evt);
+					}));
+					
+					delBtn.style.height = '16px';
+					delBtn.style.width = '25px';
+					delBtn.style.float = 'right';
+					delBtn.className = 'geColorBtn';
+					td.appendChild(delBtn);
+				}
+				
+				row.appendChild(td);
+				return row;
+			};
+			
+			div.style.position = 'relative';
+			div.style.padding = '0';
+			var grid = document.createElement('table');
+			grid.style.whiteSpace = 'nowrap';
+			grid.style.width = '100%';
+			//create header row
+			var hrow = document.createElement('tr');
+			hrow.className = 'gePropHeader';
+			var th = document.createElement('th');
+			th.className = 'gePropHeaderCell';
+			var collapseImg = document.createElement('img');
+			collapseImg.src = Sidebar.prototype.expandedImage;
+			th.appendChild(collapseImg);
+			mxUtils.write(th, mxResources.get('property'));
+			hrow.style.cursor = 'pointer';
+			
+			var onFold = function()
+			{
+				var rows = grid.querySelectorAll('.gePropNonHeaderRow');
+				var display;
+				
+				if (!that.editorUi.propertiesCollapsed)
+				{
+					collapseImg.src = Sidebar.prototype.expandedImage;
+					display = '';
+				}
+				else
+				{
+					collapseImg.src = Sidebar.prototype.collapsedImage;
+					display = 'none';
+					
+					for (var e = div.childNodes.length - 1; e >= 0 ; e--)
+					{
+						//Blur can be executed concurrently with this method and the element is removed before removing it here
+						try
+						{
+							var child = div.childNodes[e]; 
+							var nodeName = child.nodeName.toUpperCase();
+							
+							if (nodeName == 'INPUT' || nodeName == 'SELECT')
+							{
+								div.removeChild(child);
+							}
+						}
+						catch(ex){}
+					}
+				}
+				
+				for (var r = 0; r < rows.length; r++)
+				{
+					rows[r].style.display = display;
+				}
+			};
+
+			mxEvent.addListener(hrow, 'click', function()
+			{
+				that.editorUi.propertiesCollapsed = !that.editorUi.propertiesCollapsed;
+				onFold();
+			});
+			hrow.appendChild(th);
+			th = document.createElement('th');
+			th.className = 'gePropHeaderCell';
+			th.innerHTML = mxResources.get('value');
+			hrow.appendChild(th);
+			grid.appendChild(hrow);
+			
+			var isOdd = false;
+			var flipBkg = false;
+			
+			for (var key in properties)
+			{
+				var prop = properties[key];
+				
+				if (typeof(prop.isVisible) == 'function')
+				{
+					if (!prop.isVisible(state)) continue;
+				}
+				
+				var pValue = state.style[key] != null? mxUtils.htmlEntities(state.style[key] + '') : prop.defVal; //or undefined if defVal is undefined
+
+				if (prop.type == 'separator')
+				{
+					flipBkg = !flipBkg;
+					continue;
+				}
+				else if (prop.type == 'staticArr') //if dynamic values are needed, a more elegant technique is needed to replace such values
+				{
+					prop.size = parseInt(state.style[prop.sizeProperty] || properties[prop.sizeProperty].defVal) || 0;
+				}
+				else if (prop.dependentProps != null)
+				{
+					var dependentProps = prop.dependentProps;
+					var dependentPropsVals = [];
+					var dependentPropsDefVal = [];
+					
+					for (var i = 0; i < dependentProps.length; i++)
+					{
+						var propVal = state.style[dependentProps[i]];
+						dependentPropsDefVal.push(properties[dependentProps[i]].subDefVal);
+						dependentPropsVals.push(propVal != null? propVal.split(',') : []);
+					}
+					
+					prop.dependentPropsDefVal = dependentPropsDefVal;
+					prop.dependentPropsVals = dependentPropsVals;
+				}
+				
+				grid.appendChild(createPropertyRow(key, pValue, prop, isOdd, flipBkg));
+				
+				isOdd = !isOdd;
+			}
+			
+			for (var i = 0; i < secondLevel.length; i++)
+			{
+				var prop = secondLevel[i];
+				var insertElem = prop.parentRow;
+					
+				for (var j = 0; j < prop.values.length; j++)
+				{
+					//mxUtils.clone failed because of the HTM element, so manual cloning is used
+					var iProp = {type: prop.type, parentRow: prop.parentRow, isDeletable: prop.isDeletable, index: j, defVal: prop.defVal, countProperty: prop.countProperty, size: prop.size};
+					var arrItem = createPropertyRow(prop.name, prop.values[j], iProp, j % 2 == 0, prop.flipBkg);
+					insertAfter(arrItem, insertElem);
+					insertElem = arrItem;
+				}
+			}
+			
+			div.appendChild(grid);
+			onFold();
+			
+			return div;
+		};
+		
 		/**
 		 * Creates the buttons for the predefined styles.
 		 */
@@ -1103,20 +2339,40 @@
 								{
 									style = mxUtils.removeStylename(style, stylenames[j]);
 								}
+
+								var defaults = (graph.getModel().isVertex(cells[i])) ? graph.defaultVertexStyle : graph.defaultEdgeStyle;
 								
 								if (colorset != null)
 								{
-									style = mxUtils.setStyle(style, mxConstants.STYLE_FILLCOLOR, colorset['fill']);
-									style = mxUtils.setStyle(style, mxConstants.STYLE_STROKECOLOR, colorset['stroke']);
-									style = mxUtils.setStyle(style, mxConstants.STYLE_GRADIENTCOLOR, colorset['gradient']);
+									style = mxUtils.setStyle(style, mxConstants.STYLE_FILLCOLOR, colorset['fill'] ||
+										mxUtils.getValue(defaults, mxConstants.STYLE_FILLCOLOR, null));
+									style = mxUtils.setStyle(style, mxConstants.STYLE_STROKECOLOR, colorset['stroke'] ||
+										mxUtils.getValue(defaults, mxConstants.STYLE_STROKECOLOR, null));
+									style = mxUtils.setStyle(style, mxConstants.STYLE_GRADIENTCOLOR, colorset['gradient'] ||
+										mxUtils.getValue(defaults, mxConstants.STYLE_GRADIENTCOLOR, null));
+									
+									if (graph.getModel().isVertex(cells[i]))
+									{
+										style = mxUtils.setStyle(style, mxConstants.STYLE_FONTCOLOR, colorset['font'] ||
+											mxUtils.getValue(defaults, mxConstants.STYLE_FONTCOLOR, null));
+									}
 								}
 								else
 								{
-									style = mxUtils.setStyle(style, mxConstants.STYLE_FILLCOLOR, '#ffffff');
-									style = mxUtils.setStyle(style, mxConstants.STYLE_STROKECOLOR, '#000000');
-									style = mxUtils.setStyle(style, mxConstants.STYLE_GRADIENTCOLOR, null);
+									style = mxUtils.setStyle(style, mxConstants.STYLE_FILLCOLOR,
+										mxUtils.getValue(defaults, mxConstants.STYLE_FILLCOLOR, '#ffffff'));
+									style = mxUtils.setStyle(style, mxConstants.STYLE_STROKECOLOR,
+										mxUtils.getValue(defaults, mxConstants.STYLE_STROKECOLOR, '#000000'));
+									style = mxUtils.setStyle(style, mxConstants.STYLE_GRADIENTCOLOR,
+										mxUtils.getValue(defaults, mxConstants.STYLE_GRADIENTCOLOR, null));
+									
+									if (graph.getModel().isVertex(cells[i]))
+									{
+										style = mxUtils.setStyle(style, mxConstants.STYLE_FONTCOLOR,
+											mxUtils.getValue(defaults, mxConstants.STYLE_FONTCOLOR, null));
+									}
 								}
-								
+
 								graph.getModel().setStyle(cells[i], style);
 							}
 						}
@@ -1147,17 +2403,26 @@
 									colorset['gradient'] + ' 100%)';
 							}
 						}
+						else if (colorset['fill'] == mxConstants.NONE)
+						{
+							btn.style.background = 'url(\'' + Dialog.prototype.noColorImage + '\')';
+						}
 						else
-						{					
-							btn.style.backgroundColor = colorset['fill'];
+						{
+							btn.style.backgroundColor = colorset['fill'] || mxUtils.getValue(graph.defaultVertexStyle,
+								mxConstants.STYLE_FILLCOLOR, '#ffffff');
 						}
 						
-						btn.style.border = '1px solid ' + colorset['stroke'];
+						btn.style.border = '1px solid ' + (colorset['stroke'] || mxUtils.getValue(graph.defaultVertexStyle,
+							mxConstants.STYLE_STROKECOLOR, '#000000'));
 					}
 					else
 					{
-						btn.style.backgroundColor = '#ffffff';
-						btn.style.border = '1px solid #000000';
+						var bg = mxUtils.getValue(graph.defaultVertexStyle, mxConstants.STYLE_FILLCOLOR, '#ffffff');
+						var bd = mxUtils.getValue(graph.defaultVertexStyle, mxConstants.STYLE_STROKECOLOR, '#000000');
+						
+						btn.style.backgroundColor = bg;
+						btn.style.border = '1px solid ' + bd;
 					}
 					
 					picker.appendChild(btn);
@@ -1413,33 +2678,58 @@
 			var style = (state != null) ? state.style : this.graph.getCellStyle(cell);
 			
 			// mxRackContainer may be undefined as it is dynamically loaded at render time
-			if (typeof(mxRackContainer) != 'undefined' && style['childLayout'] == 'rack')
+			if (style != null)
 			{
-				var rackLayout = new mxStackLayout(this.graph, false);
-				
-				rackLayout.setChildGeometry = function(child, geo)
+				if (typeof(mxRackContainer) != 'undefined' && style['childLayout'] == 'rack')
 				{
-					var unitSize = 20;
-					geo.height = Math.max(geo.height, unitSize);
+					var rackLayout = new mxStackLayout(this.graph, false);
 					
-					if (geo.height / unitSize > 1)
+					rackLayout.setChildGeometry = function(child, geo)
 					{
-						var mod = geo.height % unitSize;
-						geo.height += mod > unitSize / 2 ? (unitSize - mod) : -mod;
-					}
-			
-					this.graph.getModel().setGeometry(child, geo);
-				};
-			
-				rackLayout.fill = true;
-				rackLayout.unitSize = mxRackContainer.unitSize | 20;
-				rackLayout.marginLeft = style['marginLeft'] || 0;
-				rackLayout.marginRight = style['marginRight'] || 0;
-				rackLayout.marginTop = style['marginTop'] || 0;
-				rackLayout.marginBottom = style['marginBottom'] || 0;
-				rackLayout.resizeParent = false;
+						var unitSize = 20;
+						geo.height = Math.max(geo.height, unitSize);
+						
+						if (geo.height / unitSize > 1)
+						{
+							var mod = geo.height % unitSize;
+							geo.height += mod > unitSize / 2 ? (unitSize - mod) : -mod;
+						}
 				
-				return rackLayout;
+						this.graph.getModel().setGeometry(child, geo);
+					};
+				
+					rackLayout.fill = true;
+					rackLayout.unitSize = mxRackContainer.unitSize | 20;
+					rackLayout.marginLeft = style['marginLeft'] || 0;
+					rackLayout.marginRight = style['marginRight'] || 0;
+					rackLayout.marginTop = style['marginTop'] || 0;
+					rackLayout.marginBottom = style['marginBottom'] || 0;
+					rackLayout.resizeParent = false;
+					
+					return rackLayout;
+				}
+				else if (typeof(mxTableLayout) != 'undefined' && style['childLayout'] == 'tableLayout')
+		        {
+		            var tableLayout = new mxTableLayout(this.graph);
+		            tableLayout.rows = style['tableRows'] || 2;
+		            tableLayout.columns = style['tableColumns'] || 2;
+		            tableLayout.colPercentages = style['colPercentages'];
+		            tableLayout.rowPercentages = style['rowPercentages'];
+		            tableLayout.equalColumns = mxUtils.getValue(style, 'equalColumns', tableLayout.colPercentages? '0' : '1') == '1';
+		            tableLayout.equalRows = mxUtils.getValue(style, 'equalRows', tableLayout.rowPercentages? '0' : '1') == '1';
+		            tableLayout.resizeParent = mxUtils.getValue(style, 'resizeParent', '1') == '1';
+		            tableLayout.border = style['tableBorder'] || tableLayout.border;
+		            tableLayout.marginLeft = style['marginLeft'] || 0;
+		            tableLayout.marginRight = style['marginRight'] || 0;
+		            tableLayout.marginTop = style['marginTop'] || 0;
+		            tableLayout.marginBottom = style['marginBottom'] || 0;
+		            tableLayout.autoAddCol = mxUtils.getValue(style, 'autoAddCol', '0') == '1';
+		            tableLayout.autoAddRow = mxUtils.getValue(style, 'autoAddRow', tableLayout.autoAddCol? '0' : '1') == '1';
+		            tableLayout.colWidths = style['colWidths'] || "100";
+		            tableLayout.rowHeights = style['rowHeights'] || "50";
+		            
+		            return tableLayout;
+		        }
 			}
 			
 			return layoutManagerGetLayout.apply(this, arguments);
@@ -1455,6 +2745,41 @@
 	{
 		// FIXME: Safari only disabled due to mathjax rendering errors
 		return graphIsCssTransformsSupported.apply(this, arguments) && !mxClient.IS_SF;
+	};
+
+	/**
+	 * Adds support for vars URL parameter.
+	 */
+	var graphGetGlobalVariable = Graph.prototype.getGlobalVariable;
+	
+	Graph.prototype.getGlobalVariable = function(name)
+	{
+		var val = graphGetGlobalVariable.apply(this, arguments);
+		
+		if (val == null)
+		{
+			if (this.globalUrlVars == null && urlParams['vars'] != null)
+			{
+				try
+				{
+					this.globalUrlVars = JSON.parse(decodeURIComponent(urlParams['vars']));
+				}
+				catch (e)
+				{
+					if (window.console != null)
+					{
+						console.log('Error in vars URL parameter: ' + e);
+					}
+				}
+			}
+			
+			if (this.globalUrlVars != null)
+			{
+				val = this.globalUrlVars[name];
+			}
+		}
+		
+		return val;
 	};
 
 	/**
@@ -1954,6 +3279,7 @@
 	mxStencilRegistry.libraries['arrows2'] = [SHAPES_PATH + '/mxArrows.js'];
 	mxStencilRegistry.libraries['atlassian'] = [STENCIL_PATH + '/atlassian.xml', SHAPES_PATH + '/mxAtlassian.js'];
 	mxStencilRegistry.libraries['bpmn'] = [SHAPES_PATH + '/bpmn/mxBpmnShape2.js', STENCIL_PATH + '/bpmn.xml'];
+	mxStencilRegistry.libraries['dfd'] = [SHAPES_PATH + '/mxDFD.js'];
 	mxStencilRegistry.libraries['er'] = [SHAPES_PATH + '/er/mxER.js'];
 	mxStencilRegistry.libraries['flowchart'] = [SHAPES_PATH + '/mxFlowchart.js', STENCIL_PATH + '/flowchart.xml'];
 	mxStencilRegistry.libraries['ios'] = [SHAPES_PATH + '/mockup/mxMockupiOS.js'];
@@ -1965,6 +3291,7 @@
 	mxStencilRegistry.libraries['ios7ui'] = [SHAPES_PATH + '/ios7/mxIOS7Ui.js', STENCIL_PATH + '/ios7/misc.xml'];
 	mxStencilRegistry.libraries['android'] = [SHAPES_PATH + '/mxAndroid.js', STENCIL_PATH + '/android/android.xml'];
 	mxStencilRegistry.libraries['electrical/transmission'] = [SHAPES_PATH + '/mxElectrical.js', STENCIL_PATH + '/electrical/transmission.xml'];
+//	mxStencilRegistry.libraries['electrical/logic_gates'] = [SHAPES_PATH + '/mxElectrical.js', STENCIL_PATH + '/electrical/logic_gates.xml'];
 	mxStencilRegistry.libraries['infographic'] = [SHAPES_PATH + '/mxInfographic.js'];
 	mxStencilRegistry.libraries['mockup/buttons'] = [SHAPES_PATH + '/mockup/mxMockupButtons.js'];
 	mxStencilRegistry.libraries['mockup/containers'] = [SHAPES_PATH + '/mockup/mxMockupContainers.js'];
@@ -1985,6 +3312,7 @@
 	mxStencilRegistry.libraries['eip'] = [SHAPES_PATH + '/mxEip.js', STENCIL_PATH + '/eip.xml'];
 	mxStencilRegistry.libraries['networks'] = [SHAPES_PATH + '/mxNetworks.js', STENCIL_PATH + '/networks.xml'];
 	mxStencilRegistry.libraries['aws3d'] = [SHAPES_PATH + '/mxAWS3D.js', STENCIL_PATH + '/aws3d.xml'];
+	mxStencilRegistry.libraries['aws4'] = [SHAPES_PATH + '/mxAWS4.js', STENCIL_PATH + '/aws4.xml'];
 	mxStencilRegistry.libraries['veeam'] = [STENCIL_PATH + '/veeam/2d.xml', STENCIL_PATH + '/veeam/3d.xml', STENCIL_PATH + '/veeam/veeam.xml'];
 	mxStencilRegistry.libraries['pid2inst'] = [SHAPES_PATH + '/pid2/mxPidInstruments.js'];
 	mxStencilRegistry.libraries['pid2misc'] = [SHAPES_PATH + '/pid2/mxPidMisc.js', STENCIL_PATH + '/pid/misc.xml'];
@@ -2453,7 +3781,7 @@
 						var bg = null;
 						var bgImage = null;
 						
-						if (page.viewState == null && page.mapping == null)
+						if (page.viewState == null)
 						{
 							// Workaround to extract view state from XML node
 							// This changes the state of the page and parses
@@ -2470,15 +3798,6 @@
 							mathEnabled = page.viewState.mathEnabled;
 							bg = page.viewState.background;
 							bgImage = page.viewState.backgroundImage;
-						}
-						else if (page.mapping != null && page.mapping.diagramMap != null)
-						{
-							// Default pageVisible in realtime is true
-							mathEnabled = page.mapping.diagramMap.get('mathEnabled') != '0';
-							bg = page.mapping.diagramMap.get('background');
-							
-							var temp = page.mapping.diagramMap.get('backgroundImage');
-							bgImage = (temp != null && temp.length > 0) ? JSON.parse(temp) : null;
 						}
 					
 						tempGraph.background = bg;
@@ -2652,9 +3971,9 @@
                 }
                 
                 if (this.shadowVisible != null)
-                	{
-                		this.page.viewState.shadowVisible = this.shadowVisible;
-                	}
+            	{
+            		this.page.viewState.shadowVisible = this.shadowVisible;
+            	}
             }   
         }
         else
@@ -2669,7 +3988,7 @@
 
             if (this.shadowVisible != null && this.shadowVisible != this.ui.editor.graph.shadowVisible)
             {
-            		this.ui.editor.graph.setShadowVisible(this.shadowVisible);
+            	this.ui.editor.graph.setShadowVisible(this.shadowVisible);
                 this.shadowVisible = !this.shadowVisible;
             }
         }

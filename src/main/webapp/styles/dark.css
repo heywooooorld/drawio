@@ -1,5 +1,11 @@
-html body .geDiagramContainer, html body div.geMenubarContainer, html body div.mxPopupMenu,  html body td.mxPopupMenuIcon, html body .geFormatContainer {
+html body .geDiagramContainer, html body div.geMenubarContainer, html body div.mxPopupMenu, html body td.mxPopupMenuIcon, html body .geFormatContainer, html body div.geMenubarContainer .geStatus:hover {
 	background-color:#2a2a2a;
+}
+html body .geSidebarContainer {
+	border-top: 1px solid #505759;
+}
+html body .geMenubarContainer .geItem:active {
+	opacity: 0.7;
 }
 html body .geFooterContainer, html body #geFooterItem1, html body textarea, html body .mxWindowTitle, html body .geDialogTitle, html body .geDialogFooter {
 	background:#2a2a2a;
@@ -62,6 +68,12 @@ html body .gePrimaryBtn {
 	border-color:#cccccc !important;
 	color:#cccccc !important;
 }
+.gePropHeader, .gePropRow, .gePropRowDark, .gePropRowCell, .gePropRow>.gePropRowCell, .gePropRowAlt>.gePropRowCell, .gePropRowDark>.gePropRowCell, .gePropRowDarkAlt>.gePropRowCell {
+	background:#2a2a2a !important;
+	border-color:#2a2a2a !important;
+	color:#cccccc !important;
+	font-weight:normal !important;
+}
 html body .geBtn:hover {
 	background:#000000 !important;
 }
@@ -88,6 +100,9 @@ html body .geDialog, html body div.mxWindow {
 	box-shadow:none;
 	color:#cccccc;
 }
+html body .geActivePage {
+	border-bottom: 3px solid #DF6C0C !important;
+}
 .geHint {
 	-webkit-box-shadow: 1px 1px 1px 0px #ccc;
 	-moz-box-shadow: 1px 1px 1px 0px #ccc;
@@ -108,4 +123,13 @@ html body .geDialog, html body div.mxWindow {
 }
 .geHsplit:hover, .geVsplit:hover {
 	background-color:#b5b5b5;
+}
+html body .geStatusAlert {
+	background-color:#a20025;
+	border:1px solid #bd002b;
+	color:#fff !important;
+}
+html body .geStatusAlert:hover {
+	background-color:#a20025;
+	border-color:#bd002b;
 }
